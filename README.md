@@ -51,3 +51,7 @@ Execute o comando `git release start <version_id>` para consolidar o branch `dev
 ## 4. Pull Requests (PR) e Code Review
 
 ### [Protegendo Branches](https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
+
+### [Criar modelos de pull request](https://docs.github.com/pt/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository)
+
+### [Criar pull request](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
