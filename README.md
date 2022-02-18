@@ -47,3 +47,7 @@ Execute o comando `git release start <version_id>` para consolidar o branch `dev
 - `gpg --armor --export <GPG_KEY_ID>`: exporta o formato pem da chave gpg para ser registrada no GitHUB / GitLab e similares
 - `gpgconf --launch gpg-agent`: permite que o ambiente não solicite a senha da chave gpg a cada assinatura de commit
 - adicionar `export GPG_TTY=$(tty)` ao final do `.zshrc` ou arquivo de profile de ambiente similar
+
+## 4. Pull Requests (PR) e Code Review
+
+### [Protegendo Branches](https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
