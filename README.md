@@ -33,3 +33,17 @@ Após a execução dos commits referentes a feature, execute `git flow feature f
 ### Release
 
 Execute o comando `git release start <version_id>` para consolidar o branch `develop` no master. Após os commits de ajustes serem consolidados, execute `git release finish <version_id>`. Isso irá realizar o merge do branch `develop` no `main` e gerar o merge do branch `main` com o `develop`
+
+## 3. GPG Keys e Assinatura de Commits
+
+- `gpg --list-secret-key --keyid-form LONG`: lista chaves gpg do ambiente
+- `gpg --full-generate-key`: gera uma nova chave gpg
+  - adicione o nome e email configurado para o git e utilize rsa de 4096 bits
+- `gpg --edit-key <GPG_KEY_ID>`: abre terminal de edição da chave gpg
+  - `adduid`: similar ao processo de criação de chave gpg, permite associar a chave novos emails associados
+  - `uid <#>`: `<#>` é o identificador do uid, permite selecionar para operações
+  - `trust`: permite definir o nivel de confiança sobre um uid / email
+  - `save`: conclui operações no terminal uid
+- `gpg --armor --export <GPG_KEY_ID>`: exporta o formato pem da chave gpg para ser registrada no GitHUB / GitLab e similares
+- `gpgconf --launch gpg-agent`: permite que o ambiente não solicite a senha da chave gpg a cada assinatura de commit
+- adicionar `export GPG_TTY=$(tty)` ao final do `.zshrc` ou arquivo de profile de ambiente similar
